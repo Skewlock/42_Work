@@ -1,0 +1,5 @@
+Credentials cache: API:C142893F-D39D-4F70-B949-C6C7491757E0
+        Principal: macourio@42LYON.FR
+
+  Issued                Expires               Principal
+Jul  5 10:14:52 2022  Jul  6 10:14:52 2022  krbtgt/42LYON.FR@42LYON.FR
