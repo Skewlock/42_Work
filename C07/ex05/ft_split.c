@@ -6,7 +6,7 @@
 /*   By: macourio <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 07:27:38 by macourio          #+#    #+#             */
-/*   Updated: 2022/07/15 10:01:45 by macourio         ###   ########lyon.fr   */
+/*   Updated: 2022/07/20 11:04:00 by macourio         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	*ft_strndup(char *str, int n)
 
 char	**ft_split(char *str, char *charset)
 {
-	int 	i;
+	int		i;
 	int		j;
 	int		size;
 	char	**res;
@@ -84,7 +84,7 @@ char	**ft_split(char *str, char *charset)
 	if (size == 0)
 		res = (char **)malloc(1 * sizeof(char));
 	if (!res)
-		return NULL;
+		return (NULL);
 	while (i < size)
 	{
 		while (str[j] && ft_is_in_charset(str[j], charset))
@@ -95,24 +95,4 @@ char	**ft_split(char *str, char *charset)
 	}
 	res[i] = 0;
 	return (res);
-}
-
-int main()
-{
-	/*
-	char a[] = "testouioui";
-	char *b;
-
-	b = ft_strndup(a, 4);
-	printf("%s\n", b);
-	*/
-	char a[] = "  Bon jour    les    amis   ";
-	char **b;
-	int i = 0;
-	b = ft_split(a, " ");
-	while (b[i] != 0)
-	{
-		printf("%s\n", b[i]);
-		i++;
-	}
 }
